@@ -4,8 +4,12 @@
 # input: year(int)
 # output: input is a leap year, input is not leap year
 
-
-year = int(input("Enter a year: "))
+while True:
+	try:
+		year = int(input("Enter a year: "))
+		break
+	except ValueError:
+		print("Please enter a valid year")
 
 if(year % 4) == 0:
     if(year % 100) == 0:
